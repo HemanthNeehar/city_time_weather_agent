@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets (CRITICAL for Agent security)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service_account*.json
+*credentials*.json
+gcp-key*.json
+client_secret*.json
+
+# Pytest & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+nosetests.xml
+
+# Google ADK & AQuA Local Evaluation Cache / Runtime Artifacts
+.adk/
+.aqua/
+aqua_reports/
+*.trace.json
+test_outputs/
+logs/
+*.log
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Miscellaneous
+Linkedin_Series.md
+Six-Layer AI Agent Quality Flywheel.png

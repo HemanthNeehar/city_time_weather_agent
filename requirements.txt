@@ -1,0 +1,2 @@
+google-adk[eval] >= 2.13.0
+pytest
