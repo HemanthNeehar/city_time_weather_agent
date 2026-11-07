@@ -147,6 +147,8 @@ def get_weather(city: str) -> dict:
         lat = geo["latitude"]
         lon = geo["longitude"]
         display_name = geo.get("name", display_name)
+        country = geo.get("country", "")
+        location_str = f"{display_name}, {country}" if country else display_name
         try:
             url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,weather_code"
             req = urllib.request.Request(url, headers={"User-Agent": "CityTimeWeatherAgent/1.0"})
@@ -159,7 +161,7 @@ def get_weather(city: str) -> dict:
                 if temp_c is not None:
                     return {
                         "status": "success",
-                        "report": f"The weather in {display_name} is {condition} with a temperature of {temp_c}°C.",
+                        "report": f"The weather in {location_str} is {condition} with a temperature of {temp_c}°C.",
                     }
         except Exception:
             pass
@@ -188,6 +190,9 @@ def get_current_time(city: str) -> dict:
     if geo and geo.get("timezone"):
         tz_name = geo["timezone"]
         display_name = geo.get("name", display_name)
+        country = geo.get("country", "")
+        if country:
+            display_name = f"{display_name}, {country}"
     elif key in _CITY_TZ:
         tz_name = _CITY_TZ[key]
     elif base_key in _CITY_TZ:

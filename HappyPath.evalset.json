@@ -1,0 +1,500 @@
+{
+  "eval_set_id": "HappyPath",
+  "name": "HappyPath",
+  "eval_cases": [
+    {
+      "eval_id": "Evalcase1",
+      "conversation": [
+        {
+          "invocation_id": "e-ad52812f-b283-43fe-89fc-8026e38775ba",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Hello! How can I help you today? I can provide you with the current weather or local time for any city. Just let me know which city you are interested in!",
+                "thought_signature": "AY89a19-1dSkCxsuNFTjF3EIbLUpBbrTTrdML1pB0-MlVTh-l5vdh2nnUsgXHJCbvgH7LKOANgpVfVJNM-oa83d2ou9twNKL7877_IOcqWTKibQW0CR_pTOtg7CDEawGyv57YqiBWbSIGWVEyq0EX6pzH1wBr82wKQLWNwLgw_Sk2dOluLpMrzHo78rE9opcmUSzjgl7lPYcPjrROmOtkSJWPoB6ZZ8YUgwUDH5gUDF6ca_CLxCpF612R9SU8wwwexagTw6pC47dWGgrVMjbvcg-DiYOT8nvJLIhDjSyWnEaji3WHiFTRPX4yagtJnrHDvJJ9CRNNwTN1sN3JAm2qPrt5tc9RLtdZlX1Nm75PFIdmmidOfo-VUIL1miCWTuvR5VLnHtdZOZubtL5eJRxvGjfd1pN7fiYdX2TEjurDFw_cvNuW8CF5etu_vxbQlqqKwM8m0Ww44xS2xSxszhP8WL8VUXlcr0Z537lG_o30xLsLiU10f2Q94qgIICePmodtXMhuFQdLXk2yGul5c_CsXN0T850dF9Vmoyl21Xj-XP2JtMU2cmu0WE2P3WtVowIZSO-iZTsNbcKHjEseo7lybQM7KMQxr2rp1pzPW6oxjydFFjKUwotVvyzF7IV8q0rBdQIjJVzfDRvfoOe2grCtlaBojWLkXK83Ts5IWf6YAlf1n6Xrz0XVw89r3HhUgQl2UgWafQowDw0pQdfMXvY-J_xxktXHCSwJWeBdacMIo8YNdywuxQPxEnfrfBbW5TktvnfSY78X_aqwlpLxJ55C1jtKMNVdXrNs0v_KXTGxdyOvL3Qw6Z5pT3UKR20XQIghNwFv44Aa1ZT3nGgdKxjexOf8PhKbMdKyQBaEmPm9sd8Q_27zjR0f3zxTSJQsC3y7uBDCMnNQw6vQLaykyxIxqK9Q8ce3VBGOimE08lp-XjouA8VbXrWWF2lhN7v5vKJs-srUv5HAOBYRhJOruyQFtrYkw--AmHVrC7LzRxL5jXTW7bh1Qv8gPaFfWjTYT-JyQgGws57s0iikMP5PiBJHpDm4QAcyOK1EI6IrqDC-HpWwJjCkFfv77OuoV6N0ZtZZT5LxNb8FFI-lZGzEDZ_uZsVijZ1HTiOkwyvNL3ur06H1efP4D4nEi3hsVW6qX-JFCGtvP5S1MRIX23Ew91nREOWCwf0WezfBkhvoxqhRLbPajOUUjuDIq11h8WZxcxXPQSqJcwZa5144RFDngJcvArhn0EOifVIk1AuLa1TMIZHvopNkC2lTLoMfKD550zEYkqrgVFqlaQ-9diXXbHUTSOmuBPRSAoOFPKsZv8E5FaisvmVNkytlAm2cMUKBfEaDgrBKdUDIE8nuhMJd_t8ODclUP6gHpbX3hCQskKurT_kzfGGIekgtftOErw9Ot5NkS7-_fKVIlNN55pTjzK-0ElI11iHck1VCOP4grRY3Z3FmgVa3GodM8YUk_yzq01xA2lHjZ1oI_z3GlvmlC5kmMKw-ZYU-N8E8-pltb1Rlh8Xl-g2S31nUbMqgxhZR3TLjLjxPG8wbifO_H8C5jrVArEHNvspqQipMoFKdcAdSLyarxNgazirLXLzQIztoGjQoq3fPpcBf00WOozFCMWQHtjfG8AjrfdG0z9wxdJz7yfjfkdu-n1uQxk-VukgbBt4OtSLUJzhOC4k32mkIIkTrIkVBoOX6leL6UzaTUxX_wZWjzhTVL20lbbw7A4BN6FKMVTz4S3GcJpi5AZlE92kzzxvCIqbur73PomACr8sW0aQd403M-mWWINjwwbEJyd7nkcN7uPTr1Q-SiJqmfwKpRupnK2lIjLLDKxKZjpoMRJkfK4pn-LQcRImWRoanG_zRQMrY2GjaVj4aRFa8hMVAIooetBSa5QBM_cGZHMbujUfcRvdW2O3VoTr-DOCQxS5rxhftTkW_f3TpKA6QyugHSEM4Opvb_0rNB6G76MN9hQoJNikW-wElsP8EMjxLsVMOfPIYI0S9cKAbbLypHbrlqZiWRFGvyTifu2LFRJ2GNIJQJ2UCfhUQK08h1lh5OfLzCucdTVJpiuL7cCy8OMXxYL-pO43TJK1PhGJbq3ANokvV8O6w_Nomw21H3FguLp5dlVK92zHFvkqXoLHN_uYhrkLHMxHCtxIeoCfDt_PSIyK0gKzEVHRjs5aOxuY7qrAqKljNkZV4ulXaYjcbzzel2ye4rEVWpbvFIidCjl86aEPZUR1xaIi6QWy5OlToU1aQPNBQSBrWr6shAhOn-fOJEyjqkgRXewUaiFl5Y8rN833myolYHdK8jsgzf3DCMdBuxqGK9N0VsRsyurxU09G5-KD8tAAOSaQmAAgLX_q7Bk12YrMU6MkTEeoPtGrRnblNRTRgk1-vkA2X0CtadsfZ8UuAbjXqv9Om2LHydzQ1kJzTFgmcoVAtx3XaZLZaqn6925GyN6VRhCVF0FaPQ6VKX_Bj3rI3_ApEVaYkoXJ1j7Qk07Jpd5CF0JY9AV-uDGRLJJNCbotBOvR-GnCiLkkxHcaNerg6bc-S_nUOYAYu1a2uuc0mWiVqBHZroDhd_xs-lZ_oaDsm3WLFAvj5A7tHuHJ013owc7Rg8MogDgfc0Xs-DeWhzHniYNGjGxuWAnx5B6ZQ8nWA62P4bZYGTXwgU-7tN6wHWrkg-_058K9LnCKf3TqUkGcMTfZER7SkChTuWAY9XroGXXGlt3z_wS8G8PpR1nuYflHgCZENhAA4e6v0LIghJcf2T81n3nLkzUAQvkU-b4YyHMNz-nV3_T1bYhHnzMYnd55pR_9x2NxsCpHOOkiOJzg43Z5z3Ed-T-1kfHy4p0X_tR7JrHx91QFEcptSxCQWjtJSkW1RPaRG1HBwG_upBz1OJDuR0kIdK-TudrXwwr1WGAHUJKm4MfODvdsw8pU3Aku0fB7Tu-B_XOpUlXNSc0qR9F9_boszyrOA0ait9rpHQWfMLRAI_WIVU2YGYmGBjI8tytvcgDv8pWLiuJ2hl_GxkFf0pNo-lSPu0euCj4DTGBTIzO5G_JuZIY_suiX_lshz1FjuNqGpwPytsqgBp0ED3eQE63H7kccGjjvQZ7g5TKbtxvxdwTF6hJobOiAWY0="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "city_time_weather_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 35,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 35
+                    }
+                  ],
+                  "prompt_token_count": 167,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 167
+                    }
+                  ],
+                  "thoughts_token_count": 538,
+                  "total_token_count": 740,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1794020594.9654634
+        },
+        {
+          "invocation_id": "e-1e76bbfe-4fa4-4684-bd09-8b309607b255",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the weather in Mumbai?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The current weather in Mumbai, India is clear with a temperature of 27.9°C.",
+                "thought_signature": "AY89a1_92QrPzTWplInWB2o6AnjuLVbLL-LkoaphOv2AuTm5IRmCPK3PrkZ32AnUU72lBS8OwBVbExl6c0EyzE9bHK9ahkfaX81W11bg02OFPpxDH0TC7Th5mURXung2CVLKE7L6W4uPjavZi28O5p-lu9AZKPsuabjmCmq_a74rKcw9Ld0ztp7XhtggCw8QF0ZMLuyxwLSejJnMTJ-U25RPTSTN8Uq-VUTukX0hjTj0NA5zMNuuaWZoYnc3E-jYo7IPJnFS4-eRPJcxkg3eXN9uMNDaZd2orvlIN-_pBn8Gj4bgxKdFGY-DQTm30r78afLeBvWSo8aETQ1FmTESXl3BTvYnzB41TinqPkptNfH9WA=="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_9458076702676461614",
+                        "args": {
+                          "city": "Mumbai"
+                        },
+                        "name": "get_weather"
+                      },
+                      "thought_signature": "AY89a19yImnNo4A19oRnAZK2BSE-QRpFH_DX-LCR5RczalnRygZQhlW9YdJwgzDEYq2CzeRh7R6KY2wzJYEiHqZ6K-xSbW4D3_HI9MFKi9qu2BP27ULXVcsEjLby9AS_Lb-j_cRoMpicGQpKdN7C05Syw9TbEqxFNNsM1vfVIZKMolxj_TXpmal8iO1iVydkDv__r5vT8tCewGT4g-Ar-FamKJlkpmj26U-0fp5jzwhJqBPDZizEFS6eNIFEMuQPiQfY3zEiYr3WuturkKIg1uQgDueHVOVBsqEhlpngE-1oMQcoCBe2S5LBUgAC6IuYzq3k7GNhTzkLz9dtBiX5nEgT_pwXCBbjvNcDsiDI0rrlDmvNtBypFf0ZAmqBYohLcg0XLif85NtuFVB53qrf9jlR8cU="
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 16,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 16
+                    }
+                  ],
+                  "prompt_token_count": 747,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 747
+                    }
+                  ],
+                  "thoughts_token_count": 55,
+                  "total_token_count": 818,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              },
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_9458076702676461614",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "success",
+                          "report": "The weather in Mumbai, India is clear sky with a temperature of 27.9°C."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "city_time_weather_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 21,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 21
+                    }
+                  ],
+                  "prompt_token_count": 842,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 842
+                    }
+                  ],
+                  "thoughts_token_count": 43,
+                  "total_token_count": 906,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1794020612.2177262
+        },
+        {
+          "invocation_id": "e-aeaccd0c-206c-4306-8347-91b94cba3139",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the current time there?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The current time in Mumbai is 8:33 AM (08:33:55 IST) on Saturday, November 7, 2026.",
+                "thought_signature": "AY89a19O20BFnXnho02lNDmmtSQuxAqwlJywo17B-DixlPdelQbbRGj4f5p-1GytQ9boiB2ZO0gPOjQF2WV4grM_3BUz3WqDMNpp5wnr2tMEdKtf6p1Ei1kitJ0sQLci0v8ZnfyADUlH0C2kxEADOv3wdDAie88DTqjT3qoio9GcQ6F1KDl55QLuruDR72KTZ02s7Vj7machwYSRJf11ZKJTq3KLWD_JMa6PJKCwpjokqVRjGbsBeHzGBmYCrtgvhUbpbzXzawb8OSfZRsQY-j8FNP0XjimjwAVqPfAK3nHc-YvKwJ4hEpdpDCkd4zXcwjiY2GzigKiA356SFc_j1kkI0dtr"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_8573992672765924994",
+                        "args": {
+                          "city": "Mumbai"
+                        },
+                        "name": "get_current_time"
+                      },
+                      "thought_signature": "AY89a1_pm0yanunq88stBZkn4v1yYps4SjPrCLqEaAclDu4oJnPlx2IPLTaKCxLy3ks5S2FXGWb9L4dia_1uqt3cUWTlbRUUG5NabydYdCDWi_5EGr3z23gszZaMCUseFa3jBt4dGB6BI6o4vWmSAxCzXmnKHLnQjzYZAKP7l79FfnJKSXSxG5aEBkDDDCKBIbWw_s61-ToT5SL7P9vMCGsj_y0uFawu1eHN9VIyhkaX24nzYuWALbcanSXUiUxmH_YPMBdmqKogk3M4BKGcb52aXAUYsqDlBK73AHQoNIpf7CmyBplcSYb7_lIfMD9T-zqiEWqKIBXGeeAUiHv4qr2NLFARk4LmYqFeMABxmH-HcY2x_ICLNECf0K3L4YRjnRhrnamfMxEra0XhQJEtVBnvOj14pAq2uO6hnnF-PrBJESMw0ZT5zNsZw4AV1R8JqDePVeUcmo-W4apw6aQEk_GX27qZNkG9OPbQglbeOLetpw=="
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 18,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 18
+                    }
+                  ],
+                  "prompt_token_count": 913,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 913
+                    }
+                  ],
+                  "thoughts_token_count": 71,
+                  "total_token_count": 1002,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              },
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_8573992672765924994",
+                        "name": "get_current_time",
+                        "response": {
+                          "status": "success",
+                          "report": "The current time in Mumbai, India is 2026-11-07 08:33:55 IST."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "city_time_weather_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 36,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 36
+                    }
+                  ],
+                  "prompt_token_count": 1037,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 1037
+                    }
+                  ],
+                  "thoughts_token_count": 52,
+                  "total_token_count": 1125,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1794020629.0815034
+        },
+        {
+          "invocation_id": "e-41498622-79c6-4412-b5ff-6acf7be2bfd7",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the current time and weather in Paris?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "In Paris, France:\n* **Current Time:** 4:04 AM (04:04:22 CET) on Saturday, November 7, 2026.\n* **Weather:** Foggy with a temperature of 4.2°C.",
+                "thought_signature": "AY89a1_MvYcC38KbbH7lbLxB2SuHl0UcihIHSRRAI2ZvSMhe2kUiy1_kfSC5YlxBMPsEADbeliqD412hBd_Cu_aX6hkUYQ2wSKEAoSXFBVWE-aXDD72WwkLcHKp9TyyPVoauG0v_N7AUSukiMFdRruyoSWlEBnvLo61XjNQbwUcGM37JVHI3OPCPz5s-85zsIQJcI43M7rufkQVsR7auEMtiVoJSFrYpV9qLpZn6A5HVixVBeLndZK6S8i8AhhEAUpjeEdTp8_RC-L34f2KT60zI1D-mgjcYnJsqxQY1WQ_7yp_iQdmpZBUZKWz3QVwef2R0C7ZMxn15nPogUA=="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_5392309018403271129",
+                        "args": {
+                          "city": "Paris"
+                        },
+                        "name": "get_current_time"
+                      },
+                      "thought_signature": "AY89a1-wAdgnz_EG8GmGFGn4mpvo4p9dOkIJbGrwgY6uLn2zklOtZ561AvIYPa259QUqteViufa65j8k4Hwja110p9Z4xH0qac-F4YniCOeMcfZUAJoDyr8Qeoy1kwQqffh9nkNfs-liJfyufut0k1bziTUSQ-au-8wdN7roCdWs__A8k5vwo3DhyNd29aigl8RN-CllzPWaLzOeneTpc34eZfNN9dOVkLCszzDkixR6EvnNp8sk6pZPA-XQNztpDlUps6XVxWEZQkZEMpsXNTuj7wiGLEXfDFE8Mp9hqKnVKbNBJbgOGzD72gkGNyhbusPOXvMu3DKO51wLt7jXjX9OuD9s3pFeWbEdM86CqiYBgwVA-iKWAeuahddv1CwMikhAwA=="
+                    },
+                    {
+                      "function_call": {
+                        "id": "call_5392309018403270714",
+                        "args": {
+                          "city": "Paris"
+                        },
+                        "name": "get_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 34,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 34
+                    }
+                  ],
+                  "prompt_token_count": 1135,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 1135
+                    }
+                  ],
+                  "thoughts_token_count": 54,
+                  "total_token_count": 1223,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              },
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_5392309018403271129",
+                        "name": "get_current_time",
+                        "response": {
+                          "status": "success",
+                          "report": "The current time in Paris, France is 2026-11-07 04:04:22 CET."
+                        }
+                      }
+                    },
+                    {
+                      "function_response": {
+                        "id": "call_5392309018403270714",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "success",
+                          "report": "The weather in Paris, France is foggy with a temperature of 4.2°C."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "city_time_weather_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 59,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 59
+                    }
+                  ],
+                  "prompt_token_count": 1280,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 1280
+                    }
+                  ],
+                  "thoughts_token_count": 57,
+                  "total_token_count": 1396,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1794020650.8986058
+        },
+        {
+          "invocation_id": "e-0e6b3f79-0040-4e22-92bf-1992b3e1b70e",
+          "user_content": {
+            "parts": [
+              {
+                "text": "What is the current weather in Gloomsberg?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "I was unable to find weather data for \"Gloomsberg\". It might be a fictional place, or I don't have coverage for that location. Please check the spelling or try another city!",
+                "thought_signature": "AY89a1-c_yi709Yr4JDd5QV7aCwjDHD-PrwP03Ou7lleG1_NiN2Ugum0hSEKSMV41UWgpWd8cQI9vEuEsbzyUmkipw5Dnd5p8FQkyPzdTmMyNcTXnPBAuOrwGEUDjev5imqU6JWTzInM9GyRDPASlUjDmG_Wj8aeiHwMEzCvObw2F55T0hU0Otm6iUO5e1sOmJRv5q4lUKbonrU9E3YQmP0QZd5lR-brThictKj2hXEadK3NtkEurCcihDni-MpLTJM-Vb2wqImrbYgEg80onz6dasCXGTMJy1epf-w4059NGUzzmFn94pc="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_11812878689891462450",
+                        "args": {
+                          "city": "Gloomsberg"
+                        },
+                        "name": "get_weather"
+                      },
+                      "thought_signature": "AY89a1-6eATHlMB0eIynGsjbVQTac5BUk7uYvQPFmZc85Oee8dkBdFTi8eChgmc0qhwkC6QfpELeJ2AIUJZYuidojoNVpqY8SXapt2Sn3XLVZn8sCP0mnDNKJCYglIS71ncGmL4fe0VzWawjCHBF0GDjlhuf3tvMXdqMXu3yYAO5ak5avWTQt6cSdPxmIN7eqxHd0MEq9PKnmTt7mWVw9hcEpI5iMWvPJ2760S08x9rwc6lsVkkO6h46CbNU-JHufaZuCjtydxOXmTIJ"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 18,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 18
+                    }
+                  ],
+                  "prompt_token_count": 1406,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 1406
+                    }
+                  ],
+                  "thoughts_token_count": 34,
+                  "total_token_count": 1458,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              },
+              {
+                "author": "city_time_weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_11812878689891462450",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "error",
+                          "error_message": "No weather data for 'Gloomsberg'."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "city_time_weather_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 40,
+                  "candidates_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 40
+                    }
+                  ],
+                  "prompt_token_count": 1472,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 1472
+                    }
+                  ],
+                  "thoughts_token_count": 34,
+                  "total_token_count": 1546,
+                  "traffic_type": "ON_DEMAND"
+                },
+                "model_version": "gemini-3.5-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1794020673.3407948
+        }
+      ],
+      "session_input": {
+        "app_name": "city_time_weather_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1794020706.2028725
+    }
+  ],
+  "creation_timestamp": 1794020695.0931125
+}
