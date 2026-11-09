@@ -79,7 +79,7 @@ This repository evolves daily alongside the LinkedIn series. Follow along or jum
 | **0** | ✅ | Kickoff | **The 6-Layer AI Agent Quality Flywheel** | Overview | `Six-Layer AI Agent Quality Flywheel.png` |
 | **1** | ✅ | Foundations | **Why Agent Evaluation $\neq$ Unit Testing** | **Gate 0** (Pre-commit / PR) | `tests/unit/test_tools_*.py`, `test_agent_contracts.py` |
 | **2** | ✅ | Foundations | **Smoke-Testing & OpenTelemetry Span Inspection** | **Gate 0** (Dev Inner-Loop) | `agent.py`, `adk web` trace inspection |
-| **3** | 📅 | Foundations | **The Golden Dataset: `EvalSet` & The 4 Collection Paths** | Git Artifact | `evalset1.evalset.json`, BigQuery trace miner |
+| **3** | ✅ | Foundations | **The Golden Dataset: `EvalSet` & The 4 Collection Paths** | Git Artifact | `evalset1.evalset.json`, BigQuery trace miner |
 | **4** | 📅 | Deterministic | **$0 Fast CI Replay with `adk conformance`** | **Gate 1** (Every Commit) | `tests/weather/generated-recordings.yaml` |
 | **5** | 📅 | Deterministic | **Architecting Your `pytest` Suite (`AgentEvaluator`)** | **Gate 1 & 2** (PR Merge) | `tests/integration/test_agent_evaluator.py` |
 | **6** | 📅 | Rubrics | **Offline LLM-as-a-Judge & Trajectory Metrics** | **Gate 2** (Staging Gate) | `eval_config.json`, `adk eval` |
