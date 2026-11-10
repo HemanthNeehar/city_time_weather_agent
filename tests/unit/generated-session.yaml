@@ -1,0 +1,375 @@
+id: 573287e9-5dff-4f6b-9454-638d03fc9463
+app_name: city_time_weather_agent
+user_id: adk_conformance_test_user
+state: {}
+events:
+  - content:
+      parts:
+        - text: What is the weather in Tokyo?
+      role: user
+    invocation_id: e-d86d8c94-4c70-4310-a88a-53466c680977
+    author: user
+    actions:
+      state_delta: {}
+    id: dde03270-f479-4017-b9eb-ae6eb9fdf8ee
+    timestamp: 1794286361.5434015
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - function_call:
+            id: call_7150543387756641145
+            args:
+              city: Tokyo
+            name: get_weather
+          thought_signature: AY89a1-A9uxP2XsPR-5LiTd5I-MHyR4NGv9p1s_blTzuaXFiTtYDhO7H2ocHtwgjykeoqXG5vfZt1V-2AV6zEK2izbQPs1lU2dCm3wItGQPSqzLohYDL7__1E3Vi8T2bipbx8EqMhg-TJ298isiIPUxM25OvEVGJ3z_2WXzN2WLqmxaQgnvYC_8EKKK4k3Vl-L6M5dafyCa99VuB2CEbKxzlxtCD3K8Hbh5Uf57TgMUYcpjn_YMB2T24dBjw6yWPL16rnzecbiuflv9agQ==
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 16
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 16
+      prompt_token_count: 173
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 173
+      thoughts_token_count: 30
+      total_token_count: 219
+      traffic_type: ON_DEMAND
+    invocation_id: e-d86d8c94-4c70-4310-a88a-53466c680977
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    long_running_tool_ids: []
+    id: e8293387-88b5-4ccd-8293-202606e13a5f
+    timestamp: 1794286361.6117363
+  - content:
+      parts:
+        - function_response:
+            id: call_7150543387756641145
+            name: get_weather
+            response:
+              status: success
+              report: The weather in Tokyo, Japan is partly cloudy with a temperature of 11.6°C.
+      role: user
+    invocation_id: e-d86d8c94-4c70-4310-a88a-53466c680977
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: f4538d50-d3c9-4cd4-8c83-3c02695f8fd1
+    timestamp: 1794286366.6736166
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - text: The weather in Tokyo is currently partly cloudy with a temperature of 11.6°C.
+          thought_signature: AY89a18SAg5gyr5PmZrBW7cAn-IMznu01dmrAOpxxCaO53ta7DdSGVGVyNMvJLsfBgZaQdjyjs86QoUzacOWLJT4LqbhGIYcjnQ_tY2IFtIXjM3Y
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 20
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 20
+      prompt_token_count: 243
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 243
+      total_token_count: 263
+      traffic_type: ON_DEMAND
+    invocation_id: e-d86d8c94-4c70-4310-a88a-53466c680977
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 221a72cd-c766-441e-b428-a1e28b12995b
+    timestamp: 1794286366.685197
+  - content:
+      parts:
+        - text: What is the current time there?
+      role: user
+    invocation_id: e-7770a5bd-0c9b-42b8-a2fe-e87e59a21279
+    author: user
+    actions:
+      state_delta: {}
+    id: 82e748d9-566e-4d7c-b5c2-40a5099a4285
+    timestamp: 1794286367.75893
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - function_call:
+            id: call_18208914282358111823
+            args:
+              city: Tokyo
+            name: get_current_time
+          thought_signature: AY89a19JlZt7RsdvScTOVUylTxMTFa4s-Sz8A-qV140p1IHAKo2ReRQU9777BEsyhsekojx6mbp5inE8q3LP2BmWRevmANl36D70Df6Tzk_3HuvpJPO6CvywXrHHnzgqyaBEx44v6dJHA8iQ6PAWngaYwog3TcRRZTwK--ruYYTScGTCP5E2Hf-9AiWDTV2yFNTFgqdOg6-UH1JeAAlNlYlC6ZbaElt0jgQfkv8xg3cRGCLCKPGndUFc-8zIgEC255Tt7ZiXgyoR3-bhoSFeGDWbqAHIfciL2xv7MVCE5uUUs1zYRdkpBegKkXLh8hrWym8baD5Iygkhpy703Q==
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 18
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 18
+      prompt_token_count: 270
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 270
+      thoughts_token_count: 41
+      total_token_count: 329
+      traffic_type: ON_DEMAND
+    invocation_id: e-7770a5bd-0c9b-42b8-a2fe-e87e59a21279
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    long_running_tool_ids: []
+    id: bd7ef51a-a454-4e0c-bfcc-27582848189c
+    timestamp: 1794286367.7773237
+  - content:
+      parts:
+        - function_response:
+            id: call_18208914282358111823
+            name: get_current_time
+            response:
+              status: success
+              report: The current time in Tokyo, Japan is 2026-11-10 13:52:48 JST.
+      role: user
+    invocation_id: e-7770a5bd-0c9b-42b8-a2fe-e87e59a21279
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 5fa3db36-e5b6-4c1e-b1f4-b908f27e93fb
+    timestamp: 1794286368.4801388
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - text: The current time in Tokyo is 1:52 PM (13:52).
+          thought_signature: AY89a19lz-YrM65dP3srIxtJ04B_iKUjxh15n_VJgGyv9_QkInEnU8yM_EBMuUf0j-Ke97wa3E_gfj_U0wbdYbdBGv2R78fVIJEfmjtaGbI9FyyF
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 19
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 19
+      prompt_token_count: 365
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 365
+      total_token_count: 384
+      traffic_type: ON_DEMAND
+    invocation_id: e-7770a5bd-0c9b-42b8-a2fe-e87e59a21279
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: c2b4311f-76f8-49a8-9844-15b15c86083a
+    timestamp: 1794286368.4887173
+  - content:
+      parts:
+        - text: What is the current time and weather in Paris?
+      role: user
+    invocation_id: e-82885701-8951-49d3-8125-08fe06650743
+    author: user
+    actions:
+      state_delta: {}
+    id: d227d8c2-6088-4e4a-adc5-42e59e5416af
+    timestamp: 1794286369.3355296
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - function_call:
+            id: call_5554280189900841821
+            args:
+              city: Paris
+            name: get_current_time
+          thought_signature: AY89a1_o9vK5zgcM8XYwMNhGzTu2Fwcl_4ErVlSw1Xbu_Jb1dR0IysG5P0TvWTJwF9wYZdeCY7IMP6rvRiP_UR-76rHuI2Nhw4dmantGbp2uBlXn5F9nQIdmnQ0PGLS74G3xFqobvAUdadr8WNTqfpRui6C13bEjy3hyxP_kEGwYYr8QdB7N_9beSHTIhjQD-y__q8sfXAqgkq4EdLsULTVrWO2I3vt6vu-YniYI_eqBuhJLXvtExCUhGz4pixO2b-JO_6efkbJ7HhXPva74n8B4hiKE4EELw9pveltXP22Lqplbg-rDjFUNS2RJWr6GhlHLphzW_4ImYxzIWQ82qPt8dYrBtxQZmN4pAH1YYj6t7gs6rxnsLiA9IW9iOminSvtRTvcpejgGJh-HNMbkB_SFLd8p2rHlJ2UtaPuKAnExUQ==
+        - function_call:
+            id: call_5554280189900843366
+            args:
+              city: Paris
+            name: get_weather
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 34
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 34
+      prompt_token_count: 394
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 394
+      thoughts_token_count: 56
+      total_token_count: 484
+      traffic_type: ON_DEMAND
+    invocation_id: e-82885701-8951-49d3-8125-08fe06650743
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    long_running_tool_ids: []
+    id: da11a196-7e9b-40f7-8d50-539abd741d96
+    timestamp: 1794286369.363836
+  - content:
+      parts:
+        - function_response:
+            id: call_5554280189900841821
+            name: get_current_time
+            response:
+              status: success
+              report: The current time in Paris, France is 2026-11-10 05:52:51 CET.
+        - function_response:
+            id: call_5554280189900843366
+            name: get_weather
+            response:
+              status: success
+              report: The weather in Paris, France is overcast with a temperature of 8.7°C.
+      role: user
+    invocation_id: e-82885701-8951-49d3-8125-08fe06650743
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 13fac4c2-76f4-46d2-80ee-7ac9d7bb8ccc
+    timestamp: 1794286371.236707
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - text: |-
+            In Paris, France:
+            * **Current Time:** 5:52 AM (05:52)
+            * **Weather:** Overcast with a temperature of 8.7°C.
+          thought_signature: AY89a18bCSieIE1MQHkwIOMt2Efu9dRnENkafn5u9RkNrgb1oxoAmQUn3wG6cJzwIzzgYUmvbTwgvXwyrqBeD8t_vExDeOvBjo58So96jUMWB2bB
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 42
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 42
+      prompt_token_count: 541
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 541
+      total_token_count: 583
+      traffic_type: ON_DEMAND
+    invocation_id: e-82885701-8951-49d3-8125-08fe06650743
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 17158437-6234-44da-ae3e-83a006a4fcdd
+    timestamp: 1794286372.0182316
+  - content:
+      parts:
+        - text: What is the climate in Gloomsberg?
+      role: user
+    invocation_id: e-c0074942-cc36-46ab-8c75-5285ccf48a41
+    author: user
+    actions:
+      state_delta: {}
+    id: fc22acbf-cf96-46b5-936a-07d964f8d713
+    timestamp: 1794286372.9947402
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - function_call:
+            id: call_16142136613906790900
+            args:
+              city: Gloomsberg
+            name: get_weather
+          thought_signature: AY89a18ie_b18CA0j-6cwUiHdPllQTuxejgB-Wxt4dniQUBY59-e-7EWKd6n9U4Vqc0fJqBTldN2Is9m5Gw75tX_MN6PcMjZJHRmPK5hOJUNzeBu6EZDNhYu8k2Oh0sFoTYCPV7hg9p03Aa4OQ_PKPFLKMZ67WGH9aV9etzDKdu3RTPuFhr3A3fFtqL_aHSVzcY-jg_VP95wK9xg-yFgBjWYn8m7LCyrBBTx1Zhhh-xbC1-bmCNAbQuy5SlgicPjmVoHTKl0YUqCrta5GoKx7VLm6Fjdv1Ybaq42V6XfOPtHi8z99kSJ-7KYlblvacZfjDBeu_L1WGI0YhxbJ3d33v__zjC4dyJPWEox6D3ULdSMn0gt9BaN_vsXOS9vB5aTKn6Epq_dsG0_IN55W4QB1qew2gJ_sRTM-sb6YfplcvHRGZb2AWCazCwRz-kzKe2nkVisnyy31kuPdcDWQYj0p-xtdW6i6ZYcIzxfy5PI3QI184lgMAi8Y5VeYdRjw8F-pb27HEGg7ZsJqjB9g8BuIC_XkwzbC3QJvnJkza-eeuwfS7cl7Rs7L1q1CMxjV5M5upsueTJAEuIKexkIw0UpCqoEL81ysM9YhDgNtKvN6KuvAQ==
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 18
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 18
+      prompt_token_count: 592
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 592
+      thoughts_token_count: 98
+      total_token_count: 708
+      traffic_type: ON_DEMAND
+    invocation_id: e-c0074942-cc36-46ab-8c75-5285ccf48a41
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    long_running_tool_ids: []
+    id: 3f5412a4-be6b-49fe-9507-f959936a587d
+    timestamp: 1794286373.0410166
+  - content:
+      parts:
+        - function_response:
+            id: call_16142136613906790900
+            name: get_weather
+            response:
+              status: error
+              error_message: |-
+                No weather data for 'Gloomsberg'.
+      role: user
+    invocation_id: e-c0074942-cc36-46ab-8c75-5285ccf48a41
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: b52e1296-8416-4eef-b1bf-23491f9077d6
+    timestamp: 1794286374.9662611
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - text: |-
+            I'm sorry, but I couldn't find any weather or climate data for Gloomsberg. It may be a fictional place or not currently supported by my weather service.
+          thought_signature: AY89a19McOa9jRgFP8ad2dGgoYOs0wpVY8ILhTIMjmdMBRRd5u5BWIMr-xtyiuMrX1UJ9L-BCcjil2IthxVBTFfJprKTGyru7pzgEMmsyKaDI09BbnTl3QEKb-NW_ITz8X65wNC58o5toYqflONwjqdOa2fGak5YTQe6CnfhiIyWb1SSChIGJnkFZcF8r5FVQI1dCt6CTEAdifhMG78Mg07Q32doza3ahMYktCB6VCpqR5U35tvdHo3KjrRvULuxE5tp3Y6RAQrJeMx0seH9mhOGR0quebxj8hKmK7D6nh2qZAD_K-mcZrnL9x_INmL3jsWzZlB_w3WbeMy2DEMY
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 36
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 36
+      prompt_token_count: 722
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 722
+      thoughts_token_count: 37
+      total_token_count: 795
+      traffic_type: ON_DEMAND
+    invocation_id: e-c0074942-cc36-46ab-8c75-5285ccf48a41
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 1f8df4ff-5c44-4315-9abe-02dd394c7dba
+    timestamp: 1794286374.997663
+  - content:
+      parts:
+        - text: Who directed the movie Interstellar?
+      role: user
+    invocation_id: e-b5328e78-5801-4eb7-88a8-146a356d9487
+    author: user
+    actions:
+      state_delta: {}
+    id: 0e21967b-e89e-493e-9109-269ee06395f0
+    timestamp: 1794286376.3895774
+  - model_version: gemini-3.5-flash
+    content:
+      parts:
+        - text: |-
+            I'm sorry, but I can only answer questions about the current weather and local time in a city. I do not have access to tools or information about movies.
+          thought_signature: AY89a1-HpVXi6JimYNgFvW0CEXKyuiBHTZH093OtL2ex3CqdNlOur6S33pmZ9YAbfMNR_NdWBsawYnk35zMrVZ1BhXhpyngrQAgEvxaYaQKyuLF4jUpFKVIbqrews9NkRtyt64JciEa1sFig7WER7rP99K2pZdA-Gis4aXZp8I7JXntZBUxhns6ee2e0n749Zq0S5sLk9oPDDT87fyRhOZuWNpEW-ePNND-mP9T8soGcQNfwUIlQdXkc4vKfY1ElfQzlDzPpR4F-N6Nn9R0IIeGiLt34S83bmxK3FedADl1U7eYngM4ACSzSuVFDHj9w39giCAd7H8QPFR03K8GLolaMrgDbmedDa1lJmCjAgLuupIjVwAPHRyNya9R0JQJUbose7ZvHtOpq7UuBvF_JFtf6F8H1SB0ilM6lS8PAU9Evz4jN1N-EUiFvDgA6zQV9aCkhzjO_2-tqZrdA6-QvOYywXXOvYty0OkiLF_l3cFeMm5boG89jveVHXNQogfirBZ1JhR6u5xoyjFIH2ppEZpM8dTrc1w7WOB0ZdXOxHI1SCgnyTq9EOFwBR6VNTmD8aZ8E2FMYGkcy52xd9MZN8iaaRlS70qKf33x7OHBQ4XAy5HCZqTMr7ufRBpJZ-cGD133i-_twnlx1HXVCeEpBWFWRQUk-A3ZOQDkx1PmcTNRIuDWC-iyQgfrPPDrkygQZ_uB9hHSxjk6tJiu5SVmpkRX9bIpQTnoSkRtZclRcTQ6mc8V6OoES2aQ6b-Ha5PB6pMBxsa7ekFiAwS3P1IxTn8_V8eBED1nv_CIZzYo8weGsxtaPwPlw_aH0X3Hv2eEuFCMTgZezBuw59a1F-rXBhfodr8qJoUDZNauql58Q6G119nAjtxd0HslQNLrsXwSDihfDQcQjCG0Wc8yrfk7ks6ddjrGQ0X5CHcGOZYAzr-aZ8qRBMdLrPuSRJyxMW3ykDmLdkr-n5Fn2dOzv-YpjrJLbrOsiCQLPOcRvOfbBH92OMMyVG89_jUpJJXm4wxWtm8LLNqXXhwsl5ofOhwfYPB8h8-oQNJSNxEyC3K0OQIiWRV0gRzzjxHo6BsrOgfyxKeu17vtQkTUh36PTJoWxakhvjUcZOC1IcYXZ9JaWTP2ePth2FUJeeznPIn5usei3KUZmMg9dafPMlnpPvcx4gVUTDPW9Sf1C156-SjT4HVPlTFYKs4bQBdHfxuMszBwAdT-6D-f63EOb1e85WrKe6V7wMo0-Am6sxTHYXJP4a8FqWRuUlybcvFX2ho_q9JYwOUBDbWz1xYpeXms4vWc74AZ0UMrk7CaM0xUbX2Y66IS6F8Rv4mgVep7xRAxZS5EFz9yInG3lXVu_ZeTXl6SNmZrJcsqwFKh2-1v5Nmqy53HZvNLDLXMiEWxe-hCE9RYZQu73zVJMdrKYvQTTPg_i4RRzG-ffyTkwj67FLOy-iBj74c6Ye_FabCqexR6BXaclcTDJnh_7YD6IFPNSzcsPnTo1osUlLnoa83EPwNrCXgfFLnzY6MFZEJ3p9BYDnxniXCvrly8NEPM82wiUJH6xkL9luTRwJiQsJnAFhRvdU2cKsTEcH8cs00oATyrfG0U8pjMg5e0eL-OHH0sfSwZnzvMcrB2C6FhyFz8zrueMNtIRtowf1oNnTKOxRXHTzb67f848fnQkNQZOwv_EIUdcQK5zVZnGpWvIhnrYGp99rhLQbc3StL5Z-tf88wcoMRODCucjGgWklTxpTKg5xVYKFz5UjtDY0KgiiogQ3iuLGHLznKNMgEuPFIrdOsJa-eyqmQUjKFAioZagUcmEN-nw4QeOZKYQfbcA-AGAwObkxrLBrXp2_9NWOmRMniZiCwVbh411JFZJ7E3KqHGpBWqMLDenzRFSoGE_L5tJnUxHguINX6Jb3VxeyfHzh1XT0Wd88f_Bejk29YKuuH6rERUsFdUJYMZvTYKClRZ_t2bCslkfHqxq1l7TBVd6ItTO9aXlISGfNtx4zR19fmMGXLqcDb0ytJpq5sfVQGHuTD6Z3cqCoZ9jHeurwm80xRbZudOEN6anf_YXd4RLFa8rJV-W0pOExVFbQQNdtA6jLh6cN1G3lkRU9Mvfj27WDOXZIxVfOL3_iIXVEXiygHBRk-auJUgYeIvj1HaINy-j1RDZ9gSHil7ItYl4e8NGY-4Uysle4l_7Ut13WZypgT98ZpNZDBneoKoWSQEDFKi7FfhPorqmfW0SiyCtyuJCup9c8pqQuwjlZ6uqGoTDPv-1shUQYDg-Bj3c5C1JKa1gstjtdymLSZqXYp68zIwCCXWMLbZK1d85HquiAvzFtBvMDR9lBn7o4PWfXyNdAZZq-9QHDyfx9AC5mRJ6ZeuaSkGtfwg5aLUhH4E8qk4nAxmkuBteQ1rgnMEu5yeIIpDr8-XxJlaATr8yz6ppAPRWNBUHMlubjoMCmHnfOuxCkheCADRn2KBfiCAjmAsZ5bqXlzjEP5Hd24adBYHQ4fY5ZRfjfV29ti2rDkIdpmeaY-248EjUmSACq3rVSgz5oJW6q191ZJZvB8zOBYwc16TLsLqje_-b4pQ2g_mCbRYHc62sqCJ7o7SvWNNNRaglqm3V8KstiMueIa8mP4lEdggpyR_4dpYDZQY7omarOWjZRbK5OmpbasaVGoAPEZQCfFb9jK9V1-MYyYI849vChXC0ZDTxNqFbccntwOmA9Pnh-qC1GbT89H_V_svUYtJ6A3NqGFwN697dTc7A44S6_2Ygg3WumgRIbWAgxmmir4FXQAb7C8rTwKG27cAG6VDRlYSgaugZ_PD3nQvkOSoIA1cx5M4=
+      role: model
+    finish_reason: STOP
+    usage_metadata:
+      candidates_token_count: 34
+      candidates_tokens_details:
+        - modality: TEXT
+          token_count: 34
+      prompt_token_count: 802
+      prompt_tokens_details:
+        - modality: TEXT
+          token_count: 802
+      thoughts_token_count: 485
+      total_token_count: 1321
+      traffic_type: ON_DEMAND
+    invocation_id: e-b5328e78-5801-4eb7-88a8-146a356d9487
+    author: city_time_weather_agent
+    node_info:
+      path: city_time_weather_agent@1
+    id: 2fd41918-7633-4bed-a1e9-e08224d11da6
+    timestamp: 1794286376.459414
+last_update_time: 1794286376.459414
