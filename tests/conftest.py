@@ -11,6 +11,12 @@ for _p in (str(_ROOT), str(_PARENT)):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
+# Automatically load .env for Vertex AI authentication & project configuration in pytest
+from dotenv import load_dotenv
+_ENV_FILE = _ROOT / ".env"
+if _ENV_FILE.exists():
+    load_dotenv(_ENV_FILE)
+
 import pytest
 from city_time_weather_agent import agent
 
