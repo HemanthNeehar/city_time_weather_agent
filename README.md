@@ -81,8 +81,8 @@ This repository evolves daily alongside the LinkedIn series. Follow along or jum
 | **2** | ✅ | Foundations | **Smoke-Testing & OpenTelemetry Span Inspection** | **Gate 0** (Dev Inner-Loop) | `agent.py`, `adk web` trace inspection |
 | **3** | ✅ | Foundations | **The Golden Dataset: `EvalSet` & The 4 Collection Paths** | Git Artifact | `evalset1.evalset.json`, BigQuery trace miner |
 | **4** | ✅ | Deterministic | **$0 Fast CI Replay with `adk conformance`** | **Gate 1** (Every Commit) | `tests/weather/generated-recordings.yaml` |
-| **5** | ✅ | Deterministic | **Architecting Your `pytest` Suite (`AgentEvaluator`)** | **Gate 1 & 2** (PR Merge) | `tests/integration/test_agent_evaluator.py` |
-| **6** | 📅 | Rubrics | **Offline LLM-as-a-Judge & Trajectory Metrics** | **Gate 2** (Staging Gate) | `eval_config.json`, `adk eval` |
+| **5** | ✅ | Deterministic | **Architecting Your `pytest` Suite (`AgentEvaluator`)** | **Gate 1 & 2** (PR Merge) | `tests/integration/test_agent_evaluator.py`, `test_config.json` |
+| **6** | ✅ | Rubrics | **Offline LLM-as-a-Judge & Trajectory Metrics** | **Gate 2** (Staging Gate) | `eval_config.json`, `adk eval`, `Part6_Offline_LLM_Judge_and_Trajectory_Metrics.pdf` |
 | **7** | 📅 | Personas | **Dynamic Multi-Turn Persona Simulation** | **Gate 2** (Stress Gate) | `scenarios.json`, `persona_eval_config.json` |
 | **8** | 📅 | Custom Code | **Domain-Specific Custom Code Metrics** | **Gate 2** (Compliance) | `custom_metrics.py` (fail-closed checks) |
 | **9** | 📅 | Cloud Promotion | **Vertex AI Agent Engine & Cloud Build CI/CD Gate** | **Gate 3** (Release Promotion) | `deploy_adk.py`, `cloudbuild.yaml` |
@@ -102,6 +102,10 @@ city_time_weather_agent/
 ├── agent.py                        # Core agent logic, tools & Open-Meteo fallback
 ├── requirements.txt                # Production & evaluation dependencies
 ├── pytest.ini                      # Pytest runner markers & pythonpath config
+├── test_config.json                # Gate 1: Fast deterministic trajectory evaluation criteria
+├── eval_config.json                # Gate 2: LLM-as-a-Judge semantic rubrics & hallucination criteria
+├── evalset1.evalset.json           # Canonical golden dataset (Tokyo, London, Paris)
+├── Part6_Offline_LLM_Judge_and_Trajectory_Metrics.pdf # Day 6 6-Slide High-Contrast PDF Carousel
 ├── .gitignore                      # Security & cache exclusions (protects secrets & .env)
 ├── .env.example                    # Sample environment configuration
 ├── Dockerfile                      # Container definition for Cloud deployment
@@ -113,7 +117,7 @@ city_time_weather_agent/
     │   ├── test_tools_time.py      # Timezone offset, strftime contracts, & fuzzy input handling
     │   └── test_agent_contracts.py # Tool docstrings, OpenAPI type hints, & prompt invariants
     └── integration/                # Layer 1B: Golden EvalSet & AgentEvaluator (Gate 1 & 2)
-        └── test_agent_evaluator.py # (Added on Day 5)
+        └── test_agent_evaluator.py # Pytest AgentEvaluator integration runner
 ```
 
 ---
@@ -180,6 +184,122 @@ To inspect live OpenTelemetry execution spans (`call_llm` $\rightarrow$ `execute
 ```bash
 adk web .
 ```
+
+---
+
+### Gate 1: Deterministic Trajectory & Golden Replay (`pytest` + `AgentEvaluator`)
+Verify tool sequence fidelity against canonical golden recordings (`evalset1.evalset.json`):
+
+```bash
+pytest tests/integration/test_agent_evaluator.py -m "llm_eval"
+```
+
+To prevent dynamic API false failures (e.g. changing temperatures), configure `test_config.json` to hard-gate tool trajectory while decoupling surface string equality:
+
+```json
+{
+  "criteria": {
+    "tool_trajectory_avg_score": 1.0
+  }
+}
+```
+
+---
+
+### Gate 2: Offline LLM-as-a-Judge & Trajectory Metrics (`adk eval` CLI)
+For staging release branches and pre-merge audits, evaluate both deterministic tool calls and semantic response quality without relying on fragile string overlap (`ROUGE-1`):
+
+1. **Install evaluation extras**:
+```bash
+pip install "google-adk[eval]"
+```
+
+2. **Configure production rubrics (`eval_config.json`)**:
+```json
+{
+  "criteria": {
+    "tool_trajectory_avg_score": 1.0,
+    "final_response_match_v2": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-flash"
+      }
+    },
+    "hallucinations_v1": {
+      "threshold": 0.8,
+      "evaluate_intermediate_nl_responses": true,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-flash"
+      }
+    },
+    "safety_v1": 0.8
+  }
+}
+```
+
+3. **Run headless evaluation**:
+```bash
+adk eval . evalset1.evalset.json --config_file_path=eval_config.json --print_detailed_results
+```
+
+---
+
+## ⚖️ Evaluation Configuration Deep-Dive: `test_config.json` vs. `eval_config.json`
+
+A core architectural pattern in production AI Agent Engineering is decoupling the **Fast Inner-Loop Developer Gate** from the **Deep Offline Audit Gate**.
+
+### Comparison Matrix
+
+| Evaluation Dimension | `test_config.json` (Gate 1) | `eval_config.json` (Gate 2) |
+| :--- | :--- | :--- |
+| **Series Day** | **Day 5** (Pytest Suite Architecture) | **Day 6** (Offline LLM Judges & CLI) |
+| **CI/CD Stage** | **Gate 1: Fast PR Merge Gate** | **Gate 2: Staging & Pre-Release Gate** |
+| **Execution Command** | `pytest tests/integration/test_agent_evaluator.py -m "llm_eval"` | `adk eval . evalset1.evalset.json --config_file_path=eval_config.json --print_detailed_results` |
+| **Primary Focus** | Deterministic Tool Trajectory Fidelity | Semantic Grounding, Hallucination Auditing & Safety |
+| **Rubric Architecture** | **Reference-Based Only** (`tool_trajectory_avg_score`) | **Hybrid**: Reference-Based + **Reference-Free LLM-as-a-Judge** |
+| **Configured Rubrics** | `tool_trajectory_avg_score: 1.0` | `tool_trajectory_avg_score: 1.0`<br>`final_response_match_v2: 0.8`<br>`hallucinations_v1: 0.8`<br>`safety_v1: 0.8` |
+| **Judge LLM Calls** | **$0.00 (Zero Judge Calls)** | **Gemini 2.5 Flash** (Automated Judge) |
+| **Execution Latency** | **Fast** (< 5s per test case) | **Deep** (15s–30s per test case) |
+| **When to Trigger** | Every Pull Request & Commit to Feature Branches | Merge to `main`, Release Candidate Branches, & Nightly Suites |
+
+---
+
+### Key Architectural Discoveries & Real-World Pitfalls
+
+#### 1. Why `final_response_match_v2` Fails on Dynamic Live Tools (`Score: 0.0`)
+When running `adk eval` on live tools (e.g., weather or time), `final_response_match_v2` often outputs `Score: 0.0 (FAILED)` even when the live response is 100% accurate:
+* **Prompt**: *"What is the weather in Tokyo?"*
+* **Expected (Golden)**: *"The weather in Tokyo is cloudy with a temperature of 18°C."*
+* **Actual (Live Agent)**: *"The weather in Tokyo is currently clear sky with a temperature of 12.7°C."*
+
+**Why?** `final_response_match_v2` is a **Reference-Based** metric. Its underlying judge prompt instructs Gemini:
+> *"Trust the reference response final answer instead. When the validation needs maths or date calculations, do not use your own calculator."*
+
+Because the live API returned `12.7°C` while the golden dataset recorded `18°C`, the judge strictly flags the output as `INVALID`.
+* **Takeaway**: Use `final_response_match_v2` for **static knowledge domains** (FAQs, SQL generators, product catalogs). For **dynamic tools**, rely on **`hallucinations_v1`** (which verifies factual alignment against the tool's live raw JSON output) rather than comparing against a stale static reference string.
+
+#### 2. The Pydantic Schema Trap in `hallucinations_v1` (`Status: NOT_EVALUATED`)
+In Google ADK, placing `evaluate_intermediate_nl_responses` inside `judge_model_options` causes Pydantic to raise `extra_forbidden ValidationError`, causing the evaluator to silently abort and report `hallucinations_v1: NOT_EVALUATED (None)`.
+* **Incorrect**:
+  ```json
+  "hallucinations_v1": {
+    "threshold": 0.8,
+    "judge_model_options": {
+      "judge_model": "gemini-2.5-flash",
+      "evaluate_intermediate_nl_responses": true
+    }
+  }
+  ```
+* **Correct**:
+  ```json
+  "hallucinations_v1": {
+    "threshold": 0.8,
+    "evaluate_intermediate_nl_responses": true,
+    "judge_model_options": {
+      "judge_model": "gemini-2.5-flash"
+    }
+  }
+  ```
 
 ---
 
