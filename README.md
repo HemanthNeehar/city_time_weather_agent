@@ -83,8 +83,8 @@ This repository evolves daily alongside the LinkedIn series. Follow along or jum
 | **4** | ✅ | Deterministic | **$0 Fast CI Replay with `adk conformance`** | **Gate 1** (Every Commit) | `tests/weather/generated-recordings.yaml` |
 | **5** | ✅ | Deterministic | **Architecting Your `pytest` Suite (`AgentEvaluator`)** | **Gate 1 & 2** (PR Merge) | `tests/integration/test_agent_evaluator.py`, `test_config.json` |
 | **6** | ✅ | Rubrics | **Offline LLM-as-a-Judge & Trajectory Metrics** | **Gate 2** (Staging Gate) | `eval_config.json`, `adk eval`, `Part6_Offline_LLM_Judge_and_Trajectory_Metrics.pdf` |
-| **7** | 📅 | Personas | **Dynamic Multi-Turn Persona Simulation** | **Gate 2** (Stress Gate) | `scenarios.json`, `persona_eval_config.json` |
-| **8** | 📅 | Custom Code | **Domain-Specific Custom Code Metrics** | **Gate 2** (Compliance) | `custom_metrics.py` (fail-closed checks) |
+| **7** | ✅ | Personas | **Dynamic Multi-Turn Persona Simulation** | **Gate 2** (Stress Gate) | `scenarios.json`, `persona_eval_config.json`, `session_input.json` |
+| **8** | ✅ | Custom Code | **Domain-Specific Custom Code Metrics** | **Gate 2** (Compliance) | `custom_metrics.py` (`unsupported_city_guardrail`), `eval_config.json` |
 | **9** | 📅 | Cloud Promotion | **Vertex AI Agent Engine & Cloud Build CI/CD Gate** | **Gate 3** (Release Promotion) | `deploy_adk.py`, `cloudbuild.yaml` |
 | **10** | 📅 | Online Drift | **Continuous 24/7 Quality Drift Monitors & Alerts** | **Gate 4** (Continuous Prod) | `policy.yaml` (Cloud Monitoring) |
 | **11** | 📅 | AQuA RCA | **AQuA: From Production Spans to Exact Code Fixes** | **Gate 5** (Nightly Audit) | `goal.md`, `scripts/run_aqua_eval.sh` |
@@ -166,7 +166,7 @@ pytest tests/unit/ -m unit
 
 **What this verifies:**
 1. **Schema & Docstrings**: Verifies tools have non-empty docstrings and strict type hints so Google ADK can generate valid OpenAPI function declarations.
-2. **Graceful Error Boundaries**: Asserts that unknown cities (`Atlantis`) return `{"status": "error", ...}` instead of raising unhandled `KeyError` exceptions that crash the agent.
+2. **Graceful Error Boundaries**: Asserts that unknown cities (`Gloomsberg`) return `{"status": "error", ...}` instead of raising unhandled `KeyError` exceptions that crash the agent.
 3. **Input Sanitization**: Tests whitespace trimming, uppercase strings, and localized country suffixes (`"Tokyo, Japan"`).
 4. **State Isolation**: Resets the in-memory `_GEO_CACHE` between test runs.
 

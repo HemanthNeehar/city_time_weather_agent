@@ -1,0 +1,88 @@
+{
+  "scenarios": [
+    {
+      "starting_prompt": "Hi there! Could you please check the current weather in Tokyo for me?",
+      "conversation_plan": "1. Wait for the Tokyo weather response. 2. Politely switch cities and ask for the current local time in London. 3. Ask for the weather in Gloomsberg (an unsupported fictional city) and verify the agent states it cannot find data rather than guessing a temperature.",
+      "user_persona": {
+        "id": "patient",
+        "description": "A polite, calm user who gives the agent clear context and waits patiently between turns.",
+        "behaviors": [
+          {
+            "name": "polite_pacing",
+            "description": "Communicates courteously and asks one clear follow-up per turn.",
+            "behavior_instructions": [
+              "Thank the agent briefly before asking the next question.",
+              "Ask clear, complete questions one at a time."
+            ],
+            "violation_rubrics": [
+              "The user becomes rude, aggressive, or demands multiple unrelated tasks at once."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "starting_prompt": "Tokyo weather now.",
+      "conversation_plan": "1. Get Tokyo weather. 2. Abruptly switch to asking for London time. 3. Ask for Gloomsberg weather and end immediately once the agent admits it has no data.",
+      "user_persona": {
+        "id": "impatient",
+        "description": "A rushed user who types short, terse messages and switches topics abruptly.",
+        "behaviors": [
+          {
+            "name": "terse_switching",
+            "description": "Uses minimal words and jumps straight to the next request without pleasantries.",
+            "behavior_instructions": [
+              "Keep every message under 10 words.",
+              "Do not use greetings or thank-yous."
+            ],
+            "violation_rubrics": [
+              "The user writes long, chatty paragraphs or overly polite filler."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "starting_prompt": "Give me the weather conditions and temperature in Celsius for Paris.",
+      "conversation_plan": "1. Verify Paris weather includes temperature and condition. 2. Ask for the exact local time in New York. 3. Probe an edge case by asking for Gloomsberg weather and verify no fabricated temperature is returned.",
+      "user_persona": {
+        "id": "expert",
+        "description": "A technical power user who expects precise metrics, units, and strict factual grounding.",
+        "behaviors": [
+          {
+            "name": "precision_probing",
+            "description": "Requests specific units/details and tests boundary conditions.",
+            "behavior_instructions": [
+              "Use precise terminology (e.g., Celsius, local timezone).",
+              "Test whether the agent refuses cleanly on unsupported cities like Gloomsberg."
+            ],
+            "violation_rubrics": [
+              "The user accepts vague answers without probing the planned edge case."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "starting_prompt": "What time is it in Paris right now?",
+      "conversation_plan": "1. Wait for the Paris time response. 2. Follow up casually using a pronoun: 'What about the weather there?' to test multi-turn context resolution. 3. End the conversation once both are answered.",
+      "user_persona": {
+        "id": "novel",
+        "description": "A first-time/novice user who speaks casually and relies on implicit pronoun references from earlier turns.",
+        "behaviors": [
+          {
+            "name": "implicit_context",
+            "description": "Refers to previously mentioned cities using 'there' or 'that place' instead of repeating the city name.",
+            "behavior_instructions": [
+              "Avoid repeating 'Paris' in Turn 2; say 'there' instead.",
+              "Keep tone casual and conversational."
+            ],
+            "violation_rubrics": [
+              "The user explicitly repeats the city name 'Paris' in Turn 2 instead of testing pronoun resolution."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

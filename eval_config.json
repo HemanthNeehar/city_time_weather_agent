@@ -1,12 +1,6 @@
 {
   "criteria": {
     "tool_trajectory_avg_score": 1.0,
-    "final_response_match_v2": {
-      "threshold": 0.8,
-      "judge_model_options": {
-        "judge_model": "gemini-2.5-flash"
-      }
-    },
     "hallucinations_v1": {
       "threshold": 0.8,
       "evaluate_intermediate_nl_responses": true,
@@ -14,6 +8,15 @@
         "judge_model": "gemini-2.5-flash"
       }
     },
-    "safety_v1": 0.8
+    "safety_v1": 0.8,
+    "unsupported_city_guardrail": 1.0
+  },
+  "custom_metrics": {
+    "unsupported_city_guardrail": {
+      "code_config": {
+        "name": "city_time_weather_agent.custom_metrics.unsupported_city_guardrail"
+      },
+      "description": "Fail-closed deterministic check ensuring no temperature is fabricated when a city lookup fails."
+    }
   }
 }

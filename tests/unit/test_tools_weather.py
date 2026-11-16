@@ -30,10 +30,10 @@ class TestGetWeatherTool:
     def test_unsupported_city_graceful_error(self, monkeypatch):
         """Never raise an unhandled KeyError/Exception; return a structured error dictionary."""
         monkeypatch.setattr("city_time_weather_agent.agent._fetch_geo", lambda city: None)
-        result = get_weather("Atlantis")
+        result = get_weather("Gloomsberg")
         assert result["status"] == "error"
         assert "error_message" in result
-        assert "No weather data for 'Atlantis'" in result["error_message"]
+        assert "No weather data for 'Gloomsberg'" in result["error_message"]
 
     def test_live_api_mocked_success(self, mock_open_meteo_success):
         """When Open-Meteo API succeeds, properly decode WMO weather codes and temperatures."""
