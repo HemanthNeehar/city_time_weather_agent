@@ -1,3 +1,12 @@
 google-adk[eval] >= 2.13.0
+google-genai >= 2.30, < 3.0.0
 pytest
 pytest-asyncio
+
+# Day 12: LangChain / LangGraph / LangSmith Evaluation Parity
+langchain >= 1.0.0
+langchain-google-genai >= 2.1.0, < 4.4.0
+langgraph >= 1.0.0
+langsmith[pytest] >= 0.3.0
+agentevals >= 0.0.7
+openevals >= 0.1.0

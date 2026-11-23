@@ -1,0 +1,54 @@
+# cloudbuild.yaml
+# Day 9: Gate 3 — Automated Agent Evaluation & Promotion Pipeline
+# Runs Gate 0/1 (unit), Gate 2 (offline LLM rubrics + custom guardrail),
+# and promotes to Vertex AI Agent Engine only when every check passes.
+
+substitutions:
+  _AGENT_REGION: "us-central1"
+  _STAGING_BUCKET: "gs://${PROJECT_ID}-adk-staging"
+  _GEMINI_ENTERPRISE_APP_ID: "city-time-weather-enterprise"
+
+steps:
+  # Step 1 (Gate 0 & 1): Deterministic Tool Unit Tests & Replay
+  - id: "gate-1-deterministic-tests"
+    name: "python:3.11-slim"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        pip install --no-cache-dir -r requirements.txt
+        PYTHONPATH=. pytest tests/unit/ -m unit -v
+
+  # Step 2 (Gate 2): Offline LLM-as-a-Judge & Custom Python Guardrails
+  - id: "gate-2-offline-evals"
+    name: "python:3.11-slim"
+    entrypoint: "bash"
+    env:
+      - "GOOGLE_CLOUD_PROJECT=${PROJECT_ID}"
+      - "GOOGLE_CLOUD_LOCATION=global"
+      - "GOOGLE_GENAI_USE_VERTEXAI=TRUE"
+      - "PYTHONPATH=.."
+    args:
+      - "-c"
+      - |
+        pip install --no-cache-dir -r requirements.txt
+        adk eval . evalset1.evalset.json --config_file_path=eval_config.json --print_detailed_results
+        adk eval . persona_eval.evalset.json --config_file_path=persona_eval_config.json --print_detailed_results
+
+  # Step 3 (Gate 3): Promote Verified Agent to Vertex AI Agent Engine
+  - id: "gate-3-promote-agent-engine"
+    name: "python:3.11-slim"
+    entrypoint: "bash"
+    env:
+      - "GOOGLE_CLOUD_PROJECT=${PROJECT_ID}"
+      - "AGENT_ENGINE_LOCATION=${_AGENT_REGION}"
+      - "GOOGLE_CLOUD_STAGING_BUCKET=${_STAGING_BUCKET}"
+      - "PYTHONPATH=.."
+    args:
+      - "-c"
+      - |
+        pip install --no-cache-dir -r requirements.txt google-cloud-aiplatform[adk,agent_engines]
+        python deploy_adk.py --project="${PROJECT_ID}" --location="${_AGENT_REGION}" --staging-bucket="${_STAGING_BUCKET}"
+
+options:
+  logging: CLOUD_LOGGING_ONLY

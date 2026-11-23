@@ -1,0 +1,42 @@
+# policy.yaml
+# Day 10 (Gate 4): Cloud Monitoring Alert Policy for 24/7 Production Drift Detection
+# Uses a 3600s rolling ALIGN_MEAN window to avoid alert fatigue from single-turn outliers.
+
+displayName: "City Weather Agent - Online Quality Drift Alert"
+combiner: OR
+documentation:
+  content: |
+    Production quality drift detected on Vertex AI Agent Engine (`city_time_weather_agent`).
+    Next step (Day 11 Outer Loop): Run `bash scripts/run_aqua_eval.sh` and `agents-cli aqua insights`
+    to inspect BigQuery `trace_spans_linked._AllSpans` and pinpoint the exact root-cause line of code.
+  mimeType: "text/markdown"
+conditions:
+  - displayName: "tool_use_quality < 0.80 over 1h"
+    conditionThreshold:
+      filter: >
+        resource.type="aiplatform.googleapis.com/ReasoningEngine"
+        AND metric.type="aiplatform.googleapis.com/agent_eval/tool_use_quality"
+      comparison: COMPARISON_LT
+      thresholdValue: 0.80
+      duration: 3600s
+      aggregations:
+        - alignmentPeriod: 3600s
+          perSeriesAligner: ALIGN_MEAN
+      trigger:
+        count: 1
+  - displayName: "task_success < 0.80 over 1h"
+    conditionThreshold:
+      filter: >
+        resource.type="aiplatform.googleapis.com/ReasoningEngine"
+        AND metric.type="aiplatform.googleapis.com/agent_eval/task_success"
+      comparison: COMPARISON_LT
+      thresholdValue: 0.80
+      duration: 3600s
+      aggregations:
+        - alignmentPeriod: 3600s
+          perSeriesAligner: ALIGN_MEAN
+      trigger:
+        count: 1
+alertStrategy:
+  autoClose: 86400s
+enabled: true

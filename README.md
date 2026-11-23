@@ -85,10 +85,10 @@ This repository evolves daily alongside the LinkedIn series. Follow along or jum
 | **6** | ✅ | Rubrics | **Offline LLM-as-a-Judge & Trajectory Metrics** | **Gate 2** (Staging Gate) | `eval_config.json`, `adk eval`, `Part6_Offline_LLM_Judge_and_Trajectory_Metrics.pdf` |
 | **7** | ✅ | Personas | **Dynamic Multi-Turn Persona Simulation** | **Gate 2** (Stress Gate) | `scenarios.json`, `persona_eval_config.json`, `session_input.json` |
 | **8** | ✅ | Custom Code | **Domain-Specific Custom Code Metrics** | **Gate 2** (Compliance) | `custom_metrics.py` (`unsupported_city_guardrail`), `eval_config.json` |
-| **9** | 📅 | Cloud Promotion | **Vertex AI Agent Engine & Cloud Build CI/CD Gate** | **Gate 3** (Release Promotion) | `deploy_adk.py`, `cloudbuild.yaml` |
-| **10** | 📅 | Online Drift | **Continuous 24/7 Quality Drift Monitors & Alerts** | **Gate 4** (Continuous Prod) | `policy.yaml` (Cloud Monitoring) |
-| **11** | 📅 | AQuA RCA | **AQuA: From Production Spans to Exact Code Fixes** | **Gate 5** (Nightly Audit) | `goal.md`, `scripts/run_aqua_eval.sh` |
-| **12** | 📅 | Cross-Framework | **Rebuilding the Pipeline on LangGraph + LangSmith** | All Gates | `agent_langgraph.py`, `test_langgraph.py` |
+| **9** | ✅ | Cloud Promotion | **Vertex AI Agent Engine & Cloud Build CI/CD Gate** | **Gate 3** (Release Promotion) | `deploy_adk.py`, `cloudbuild.yaml`, `Part9_Agent_Engine_and_Eventarc_CICD.pdf` |
+| **10** | ✅ | Online Drift | **Continuous 24/7 Quality Drift Monitors & Alerts** | **Gate 4** (Continuous Prod) | `policy.yaml` (Cloud Monitoring), `scripts/setup_online_monitoring.sh` |
+| **11** | ✅ | AQuA RCA | **AQuA: From Production Spans to Exact Code Fixes** | **Gate 5** (Nightly Audit) | `goal.md`, `scripts/run_aqua_eval.sh`, `Part11_Closing_Outer_to_Inner_Loop.pdf` |
+| **12** | ✅ | Cross-Framework | **Rebuilding the Pipeline on LangGraph + LangSmith** | All Gates | `agent_langgraph.py`, `tests/langsmith/test_langgraph_weather.py` |
 | **13** | 📅 | Finale | **The Rosetta Stone Map: Google ADK $\leftrightarrow$ LangGraph** | Full Lifecycle | Complete 11-Layer Comparison Matrix |
 
 *Legend: ✅ Completed | 🔄 In Progress / Next Up | 📅 Upcoming*

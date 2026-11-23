@@ -5,6 +5,11 @@ import urllib.request
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import LlmAgent
+import os
+
+# Force Vertex AI backend and global routing for Gemini calls
+os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "TRUE"
+os.environ["GOOGLE_CLOUD_LOCATION"] = "global"
 
 # Use Windows/system certificate store if available (avoids SSL issues behind proxies)
 try:
@@ -209,6 +214,7 @@ def get_current_time(city: str) -> dict:
         }
     except Exception as e:
         return {"status": "error", "error_message": f"Error calculating time for '{city}': {str(e)}"}
+
 
 root_agent = LlmAgent(
     name="city_time_weather_agent",
