@@ -89,7 +89,7 @@ This repository evolves daily alongside the LinkedIn series. Follow along or jum
 | **10** | ✅ | Online Drift | **Continuous 24/7 Quality Drift Monitors & Alerts** | **Gate 4** (Continuous Prod) | `policy.yaml` (Cloud Monitoring), `scripts/setup_online_monitoring.sh` |
 | **11** | ✅ | AQuA RCA | **AQuA: From Production Spans to Exact Code Fixes** | **Gate 5** (Nightly Audit) | `goal.md`, `scripts/run_aqua_eval.sh`, `Part11_Closing_Outer_to_Inner_Loop.pdf` |
 | **12** | ✅ | Cross-Framework | **Rebuilding the Pipeline on LangGraph + LangSmith** | All Gates | `agent_langgraph.py`, `tests/langsmith/test_langgraph_weather.py` |
-| **13** | 📅 | Finale | **The Rosetta Stone Map: Google ADK $\leftrightarrow$ LangGraph** | Full Lifecycle | Complete 11-Layer Comparison Matrix |
+| **13** | ✅ | Finale | **The Rosetta Stone Map: Google ADK $\leftrightarrow$ LangGraph** | Full Lifecycle | `Part13_LinkedIn_Article.md`, `Part13_End_to_End_Agent_Evaluation_Article.pdf`, `diagrams/` |
 
 *Legend: ✅ Completed | 🔄 In Progress / Next Up | 📅 Upcoming*
 
