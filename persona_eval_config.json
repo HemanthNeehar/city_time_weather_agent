@@ -32,7 +32,7 @@
   },
   "user_simulator_config": {
     "model": "gemini-2.5-flash",
-    "max_allowed_invocations": 16,
+    "max_allowed_invocations": 8,
     "model_configuration": {
       "thinking_config": {
         "include_thoughts": false,

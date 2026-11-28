@@ -70,6 +70,13 @@ def main():
             "tool_args": {"city": "Paris"},
             "reference": "The weather in Paris, France is clear sky with a temperature of 19.5°C.",
         },
+        {
+            "eval_id": "gloomsberg_unsupported",
+            "prompt": "What is the weather in Gloomsberg?",
+            "tool_name": "get_weather",
+            "tool_args": {"city": "Gloomsberg"},
+            "reference": "Sorry, I could not find weather data for Gloomsberg.",
+        },
     ]
 
     eval_cases = [
